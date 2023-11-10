@@ -1,7 +1,7 @@
-import ArticlesInfo from "../components/ArticlesInfo"
+import NewPageDetail from "../components/NewPageDetail"
 import { gettingDataFromNewsApi } from "../api"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom"
 
 type Source = {
   id: string;
@@ -25,8 +25,15 @@ type News = {
   articles: Article[]
 }
 
-function Articles() {
+type Params = {
+  title: string;
+}
+
+
+function NewPage() {
   const [dataNew, setDataNew] = useState<News | null>(null)
+  const { title } = useParams<Params>()
+  console.log(title)
   
   useEffect(() => {
     const fetchData = async () => {
@@ -38,19 +45,21 @@ function Articles() {
   }, [])  
 
   return (
-    <div className="p-6">
-      {dataNew?.articles.map((article, index) => (
-        <Link to={`/articles/${article.title}`} className="cursor-pointer">
-            <div className="my-2" key={index}>
-              <ArticlesInfo 
-              title={article.title}
-              publishedAt={article.publishedAt}
+    <div className="">
+      {dataNew?.articles.filter(item => item.title === title).map((article) => (
+            <div className="" key={article.author}>
+              <NewPageDetail 
+                author={article.author}
+                content={article.content}
+                description={article.description}
+                publishedAt={article.publishedAt}
+                title={article.title}
+                img={article.urlToImage}  
               />
             </div>
-        </Link>
       ))}
     </div>
   )
 }
 
-export default Articles
+export default NewPage

@@ -35,6 +35,7 @@ function NewsPage() {
 
     fetchData()
   }, [])  
+  console.log(dataNew)
 
   return (
     <div className="flex flex-row">
@@ -52,3 +53,4 @@ function NewsPage() {
 }
 
 export default NewsPage
+

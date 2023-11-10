@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 
 interface INewsInfo {
   title: string;
@@ -32,12 +31,10 @@ function ArticlesInfo(props: INewsInfo) {
 
 
   return (
-    <Link to='/' className="cursor-pointer">
       <div className="border-b-2 hover:opacity-50">
         <h3 className="font-bold">{title}</h3>
         <h2 className="text-sm">{formatDate(publishedAt)}</h2>
       </div>
-    </Link>
   )
 }
 
