@@ -1,4 +1,4 @@
-import ArticlesInfo from "../components/ArticlesInfo"
+import NewsInfo from "../components/NewsInfo"
 import { gettingDataFromNewsApi } from "../api"
 import { useEffect, useState } from "react"
 
@@ -24,7 +24,7 @@ type News = {
   articles: Article[]
 }
 
-function Articles() {
+function NewsPage() {
   const [dataNew, setDataNew] = useState<News | null>(null)
   
   useEffect(() => {
@@ -37,12 +37,13 @@ function Articles() {
   }, [])  
 
   return (
-    <div className="p-6">
-      {dataNew?.articles.map((article, index) => (
-        <div className="my-2" key={index}>
-          <ArticlesInfo 
+    <div className="flex flex-row">
+      {dataNew?.articles.slice(2, 4).map((article, index) => (
+        <div className="w-2/4 h-1/2 p-3" key={index}>
+          <NewsInfo 
           title={article.title}
           publishedAt={article.publishedAt}
+          img={article.urlToImage}
           />
         </div>
       ))}
@@ -50,4 +51,4 @@ function Articles() {
   )
 }
 
-export default Articles
+export default NewsPage

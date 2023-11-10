@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './Layout'
-import StartPage from '../pages/Start'
+import News from '../pages/News'
 import Articles from '../pages/Articles'
 import Photos from '../pages/Photos'
 import Sources from '../pages/Sources'
@@ -12,7 +12,7 @@ function Main() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<StartPage />} />
+          <Route index element={<News />} />
           <Route path='articles' element={<Articles />} />
           <Route path='photos' element={<Photos />} />
           <Route path='sources' element={<Sources />} />

@@ -27,9 +27,9 @@ function Header () {
               <Link to="/articles" className="text-xl hover:text-gray-500">Articles</Link>
               <Link to="/photos" className="text-xl hover:text-gray-500">Photos</Link>
               <Link to="/sources" className="text-xl hover:text-gray-500">Sources</Link>
-              <Link to="/login" className="text-xl flex justify-center hover:text-gray-500">
+              <Link to="/login" className="text-xl flex justify-center items-center hover:text-gray-500">
                 <ImUser />
-                Login
+                Log in
               </Link>
             </div>
           )}

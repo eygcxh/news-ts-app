@@ -21,4 +21,4 @@ const gettingDataFromNewsApi= async () => {
   }
 }
 
-export default gettingDataFromNewsApi
+export { gettingDataFromNewsApi }
