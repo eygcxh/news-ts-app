@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 interface INewsInfo {
   title: string;
@@ -27,14 +27,14 @@ function NewsInfo(props: INewsInfo) {
   const { title, publishedAt, img } = props
 
   const formatDate = (dateString: string) => {
-    const options: Options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+    const options: Options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }
     return new Date(dateString).toLocaleDateString("en-US", options)
   }
 
   return (
     <Link to={`/articles/${title}`}>
       <div className="bg-gray-300 rounded-xl shadow-md hover:opacity-60 cursor-pointer ">
-        <img src={img} alt="" className="" />
+        <img src={img} alt="" className="rounded-t-xl shadow-md" />
         <h2 className="px-5 pt-2">{title}</h2>
         <h2 className="px-5 ">{formatDate(publishedAt)}</h2>
       </div>

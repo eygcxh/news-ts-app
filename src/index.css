@@ -12,3 +12,24 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+/* Firefox */
+*{
+  scrollbar-width: auto;
+  scrollbar-color: #f2f2f2 #f87171;
+}
+
+/* Other browsers */
+*::-webkit-scrollbar{
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track{
+  background: #f87171;
+}
+
+*::-webkit-scrollbar-thumb{
+  background-color: #f2f2f2;
+  border-radius: 0px;
+  border: 0px solid #ffffff;
+}

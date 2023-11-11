@@ -8,6 +8,9 @@ function Header () {
 
   const handleShowMenu = () => setShowMenu(!showMenu)
 
+  const handleMenuClick = () => {
+    handleShowMenu()
+  }
 
   return (
     <div>
@@ -24,10 +27,10 @@ function Header () {
               <div onClick={handleShowMenu} className="cursor-pointer text-xl">
                 <FiX />
               </div>
-              <Link to="/articles" className="text-xl hover:text-gray-500">Articles</Link>
-              <Link to="/photos" className="text-xl hover:text-gray-500">Photos</Link>
-              <Link to="/sources" className="text-xl hover:text-gray-500">Sources</Link>
-              <Link to="/login" className="text-xl flex justify-center items-center hover:text-gray-500">
+              <Link onClick={handleMenuClick} to="/articles" className="text-xl hover:text-gray-500">Articles</Link>
+              <Link onClick={handleMenuClick} to="/photos" className="text-xl hover:text-gray-500">Photos</Link>
+              <Link onClick={handleMenuClick} to="/sources" className="text-xl hover:text-gray-500">Sources</Link>
+              <Link onClick={handleMenuClick} to="/login" className="text-xl flex justify-center items-center hover:text-gray-500">
                 <ImUser />
                 Log in
               </Link>

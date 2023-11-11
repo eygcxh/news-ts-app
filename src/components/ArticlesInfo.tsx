@@ -25,7 +25,7 @@ function ArticlesInfo(props: INewsInfo) {
   const { title, publishedAt } = props
 
   const formatDate = (dateString: string) => {
-    const options: Options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+    const options: Options = { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }
     return new Date(dateString).toLocaleDateString("en-US", options)
   }
 
