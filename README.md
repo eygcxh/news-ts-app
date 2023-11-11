@@ -33,7 +33,7 @@ First, ensure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg
 Clone the repository and move into the project directory:
 
 ```bash
-git clone <your repository URL>
+git clone https://github.com/eygcxh/news-ts-app.git
 cd ts-project
 ```
 
