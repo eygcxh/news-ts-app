@@ -33,7 +33,6 @@ type Params = {
 function NewPage() {
   const [dataNew, setDataNew] = useState<News | null>(null)
   const { title } = useParams<Params>()
-  console.log(title)
   
   useEffect(() => {
     const fetchData = async () => {
@@ -47,14 +46,15 @@ function NewPage() {
   return (
     <div className="">
       {dataNew?.articles.filter(item => item.title === title).map((article) => (
-            <div className="" key={article.author}>
+            <div className="p-16" key={article.author}>
               <NewPageDetail 
                 author={article.author}
                 content={article.content}
                 description={article.description}
                 publishedAt={article.publishedAt}
                 title={article.title}
-                img={article.urlToImage}  
+                img={article.urlToImage}
+                moreInfo={article.url}  
               />
             </div>
       ))}
