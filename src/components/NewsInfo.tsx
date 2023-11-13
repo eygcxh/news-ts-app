@@ -34,7 +34,7 @@ function NewsInfo(props: INewsInfo) {
   return (
     <Link to={`/articles/${title}`}>
       <div className="bg-gray-300 rounded-xl shadow-md hover:opacity-60 cursor-pointer ">
-        <img src={img} alt="" className="rounded-t-xl shadow-md" />
+        <img src={img} alt="" className="rounded-t-xl shadow-md w-full" />
         <h2 className="px-5 pt-2">{title}</h2>
         <h2 className="px-5 ">{formatDate(publishedAt)}</h2>
       </div>

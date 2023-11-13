@@ -21,9 +21,9 @@ function Header () {
         </div>
       </header>
       <nav>
-        <div>
+        <div className="">
           {showMenu && (
-            <div className={`flex flex-col gap-4 bg-red-400 top-0 right-0 min-h-screen px-8 py-10 absolute transform transition duration-500 ${showMenu ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
+            <div className='flex flex-col gap-4 bg-red-400 top-0 right-0 min-h-screen px-8 py-10 fixed'>
               <div onClick={handleShowMenu} className="cursor-pointer text-xl">
                 <FiX />
               </div>

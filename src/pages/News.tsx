@@ -39,7 +39,7 @@ function NewsPage() {
   return (
     <div className="flex flex-row">
       {dataNew?.articles.slice(2, 4).map((article, index) => (
-        <div className="w-2/4 h-1/2 p-5 " key={index}>
+        <div className="w-2/4 h-1/2 p-5" key={index}>
           <NewsInfo 
           title={article.title}
           publishedAt={article.publishedAt}
